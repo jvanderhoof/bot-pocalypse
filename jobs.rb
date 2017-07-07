@@ -6,13 +6,7 @@ Dotenv.load
 require 'bundler/setup'
 Bundler.require
 
-key = 'xoxb-208514179809-HhiWci73mz9piRxf7nivng0v'
-
-Slack.configure do |config|
-  config.token = key
-end
-
-client = Slack::Web::Client.new
+client = Slack::Web::Client.new(token: ENV['DEPLOYER_KEY'])
 client.auth_test
 
 
