@@ -26,7 +26,6 @@ def s_message(client, msg)
   client.chat_postMessage(channel: '#general', text: msg, as_user: true)
 end
 
-# { client: , message: '' },
 [
   { client: jason, message: 'deployer show staging flying-monkey health' },
   { client: jason, message: 'deployer show flying-monkey tests' },
